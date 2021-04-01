@@ -38,7 +38,6 @@ export class GroupControllerModel
     public readonly receiverType = 'group';
     public subject: string;
     public isLoading = false; // TODO: Show loading indicator
-    public readonly requiredMemberFeatureMask = threema.ContactReceiverFeature.GROUP_CHAT;
 
     public members: string[];
     public name: string;
@@ -114,8 +113,8 @@ export class GroupControllerModel
 
     public isValid(): boolean {
         return this.members.filter((identity: string) => {
-                return identity !== this.webClientService.me.id;
-            }).length > 0;
+            return identity !== this.webClientService.me.id;
+        }).length > 0;
     }
 
     public canChat(): boolean {

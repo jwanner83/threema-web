@@ -10,6 +10,41 @@ the full log, please refer to the git commit history.
 > See https://github.com/threema-ch/threema-web/pull/996 for more details.
 
 
+### [v2.3.11][v2.3.11] (2021-03-16)
+
+Changes:
+
+* [feature] Add support for HMS push tokens ([#1044][i1044])
+* [bug] Revert clearing of search when clicking on conversation / contact ([#1042][i1042])
+
+
+### [v2.3.10][v2.3.10] (2021-03-03)
+
+Changes:
+
+* [bug] Fix playback of audio messages in newer Chromium browsers ([#1039][i1039])
+* [bug] Do not allow adding own ID to groups / distribution lists ([#1040][i1040])
+
+
+### [v2.3.9][v2.3.9] (2021-02-23)
+
+Changes:
+
+* [feature] Allow easily clearing search box ([#92][i92], [#1026][i1026])
+* [feature] Add option for minimal user interface ([#1029][i1029])
+* [feature] Allow scanning QR codes on inverted background ([#1027][i1027])
+* [feature] Add Bulgarian, Korean, Romanian translations ([#1036][i1036])
+* [feature] Update emoji to Unicode 13 ([#1034][i1034])
+* [feature] Emoji picker: Use shortname as title text ([#1034][i1034])
+* [bug] Translate title in error dialog ([#1033][i1033])
+* [change] Remove feature mask checks ([#1035][i1035])
+
+Contributors:
+
+- [Jonas Wanner][@jwanner83]
+- [Sam][@samuelT2]
+
+
 ### [v2.3.8][v2.3.8] (2021-01-12)
 
 Changes:
@@ -727,6 +762,7 @@ First public release.
 [i86]: https://github.com/threema-ch/threema-web/issues/86
 [i90]: https://github.com/threema-ch/threema-web/issues/90
 [i97]: https://github.com/threema-ch/threema-web/issues/97
+[i92]: https://github.com/threema-ch/threema-web/issues/92
 [i93]: https://github.com/threema-ch/threema-web/issues/93
 [i102]: https://github.com/threema-ch/threema-web/issues/102
 [i108]: https://github.com/threema-ch/threema-web/issues/108
@@ -985,7 +1021,21 @@ First public release.
 [i1012]: https://github.com/threema-ch/threema-web/issues/1012
 [i1011]: https://github.com/threema-ch/threema-web/issues/1011
 [i1021]: https://github.com/threema-ch/threema-web/issues/1021
+[i1026]: https://github.com/threema-ch/threema-web/issues/1026
+[i1027]: https://github.com/threema-ch/threema-web/issues/1027
+[i1029]: https://github.com/threema-ch/threema-web/issues/1029
+[i1033]: https://github.com/threema-ch/threema-web/issues/1033
+[i1034]: https://github.com/threema-ch/threema-web/issues/1034
+[i1035]: https://github.com/threema-ch/threema-web/issues/1035
+[i1036]: https://github.com/threema-ch/threema-web/issues/1036
+[i1039]: https://github.com/threema-ch/threema-web/issues/1039
+[i1040]: https://github.com/threema-ch/threema-web/issues/1040
+[i1042]: https://github.com/threema-ch/threema-web/issues/1042
+[i1044]: https://github.com/threema-ch/threema-web/issues/1044
 
+[v2.3.11]: https://github.com/threema-ch/threema-web/compare/v2.3.10...v2.3.11
+[v2.3.10]: https://github.com/threema-ch/threema-web/compare/v2.3.9...v2.3.10
+[v2.3.9]: https://github.com/threema-ch/threema-web/compare/v2.3.8...v2.3.9
 [v2.3.8]: https://github.com/threema-ch/threema-web/compare/v2.3.7...v2.3.8
 [v2.3.7]: https://github.com/threema-ch/threema-web/compare/v2.3.6...v2.3.7
 [v2.3.6]: https://github.com/threema-ch/threema-web/compare/v2.3.5...v2.3.6
@@ -1053,3 +1103,5 @@ First public release.
 [@chrisly-bear]: https://github.com/chrisly-bear
 [@dennisheer]: https://github.com/dennisheer
 [@das-g]: https://github.com/das-g
+[@samuelT2]: https://github.com/samuelT2
+[@jwanner83]: https://github.com/jwanner83

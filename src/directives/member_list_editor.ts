@@ -29,7 +29,6 @@ export default [
             restrict: 'EA',
             scope: {},
             bindToController: {
-                requiredMemberFeatureMask: '<',
                 members: '=activeMembers',
                 onChange: '=onChange',
                 placeholder: '=placeholder',
@@ -56,6 +55,11 @@ export default [
                             .filter((contactReceiver: threema.ContactReceiver) => {
                                 // Ignore already selected contacts
                                 if (this.members.filter((id: string) => id === contactReceiver.id).length !== 0) {
+                                    return false;
+                                }
+
+                                // Ignore own contact
+                                if (contactReceiver.id === webClientService.me.id) {
                                     return false;
                                 }
 
@@ -95,12 +99,7 @@ export default [
 
                 this.$onInit = function() {
                     // Cache all contacts
-                    this.allContacts = Array.from(webClientService.contacts.values())
-                        .filter((contactReceiver: threema.ContactReceiver) => hasFeature(
-                            contactReceiver,
-                            this.requiredMemberFeatureMask,
-                            log,
-                        )) as threema.ContactReceiver[];
+                    this.allContacts = Array.from(webClientService.contacts.values());
                 };
 
             }],

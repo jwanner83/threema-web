@@ -509,13 +509,15 @@ declare namespace threema {
     }
 
     const enum PushTokenType {
-        Gcm = 'gcm',
+        Fcm = 'gcm',
         Apns = 'apns',
+        Hms = 'hms',
     }
 
     const enum PushTokenPrefix {
-        Gcm = 'g',
+        Fcm = 'g',
         Apns = 'a',
+        Hms = 'h',
     }
 
     interface TrustedKeyStoreData {
@@ -625,11 +627,6 @@ declare namespace threema {
 
     interface ControllerModelWithMembers {
         /**
-         * A required feature flag that all members must have.
-         */
-        requiredMemberFeatureMask: threema.ContactReceiverFeature;
-
-        /**
          * Callback called when the members change.
          */
         onChangeMembers(identities: string[]): void;
@@ -734,7 +731,8 @@ declare namespace threema {
         // Whether the app is the *work* variant of Threema
         isWork: boolean;
 
-        // The GCM / APNS push token
+        // The FCM / HMS / APNS push token
+        // (Note: HMS tokens are prefixed with "hms;")
         pushToken?: string;
 
         // The device configuration
@@ -819,6 +817,11 @@ declare namespace threema {
     const enum ComposeAreaSubmitKey {
         Enter = 0,
         CtrlEnter = 1,
+    }
+
+    const enum UserInterface {
+        Default = 'default',
+        Minimal = 'minimal'
     }
 
     interface EmojiInfo {
